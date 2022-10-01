@@ -49,21 +49,34 @@ class Vendor(Person):
 vendor = Vendor("Abdallah", 3, 6,8,20)
 
 
-class Customer:
+class Customer(person):
     # plan on blue note
-    def __init__(self): 
-
+    def __init__(self,name,location,money): 
+        super().__init__(name,location,money) # for inheritance
+        
 
     def _is_in_range(self,vendor):
-    if customer is in range:
+        D = vendor.location - self.location # to check the range 
+        if D > vender.range:
+            return True
+        else:
+            return False
 
+    def _have_enough_money(self,vendor, number_of_icecreams):
+        # check if the customer have money to buy ice cream from the vender 
+        # prints the message saying if the customer has enough mony or not    
 
-    def _have_enough_money(self,vendor, number_of_icecreams):    
+        if self.waller.money >= vendor.price * number_of_icecreams:
+            return True
+        else:
+            return False 
     
 
     def request_icecream(self,vendor, number_of_icecreams):
-
-
-
+        # checks if the customer is in the venders range and has enough money for the ice cream , there is a requst is sent to the vendor.
+        # print a message saying that a request has been done made.  
+        if self._is_in_range(vender) and self._have_enough_money(vendor, number_of_icecreams):
+            print ("your request has been made")
+            return vender.sellTo(self, number_of_icecreams)
 
 customer = Customer("Abdallah", 3, 6)
