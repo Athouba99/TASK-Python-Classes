@@ -37,7 +37,7 @@ class Person:
 
 class Vendor(Person):
     # implement Vendor!
-    def __init__(self,name,range,price,location,money):
+    def __init__(self,name,location,money):
         super().__init__(name,location,money)
         self.range = 5 
         self.price = 1
@@ -86,11 +86,27 @@ class Customer(Person):
 
 # customer = Customer("Abdallah", 3, 6)
 
-# Vendor_x = Vendor("Saja",4,2) # making new vendor with location and money amount
+vendor_x = Vendor("Saja",4 ,2 ) # making new vendor with location and money amount
 
 nearby_customer = Customer("Lulu",3,16) #making new customer with location and money amount
 
 distant_customer = Customer ("Sarah", 20, 3) # making new customer with location and money amount 
 
 broke_customer = Customer("Ali", 1, 27)
+
+nearby_customer.request_icecream(vendor_x, 3) 
+
+print(nearby_customer.wallet.money)
+
+print(vendor_x.wallet.money)
+
+print(vendor_x.location)
+
+broke_customer.request_icecream(vendor_x, 2)
+
+print(broke_customer.wallet.money)  
+
+print(vendor_x.wallet.money)
+  
+print(vendor_x.location)
 
